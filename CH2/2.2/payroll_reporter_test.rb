@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'payroll_reporter'
+require_relative 'payroll_reporter'
 
 class ReporterTest < Test::Unit::TestCase
 

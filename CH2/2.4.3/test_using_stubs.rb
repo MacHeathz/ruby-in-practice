@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'material_supplier'
+require_relative 'material_supplier'
 
 
 class SupplierInterface
@@ -12,7 +12,7 @@ class SupplierInterface
   @@cart = {}
   
   def self.search(product_name)
-    @@products.index(product_name)
+    @@products.key(product_name)
   end
   
   def self.add_to_cart(id, quantity)

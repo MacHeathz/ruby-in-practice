@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'test/unit'
-require 'mocha'
-require 'material_supplier'
+require 'mocha/test_unit'
+require_relative 'material_supplier'
 
 class TestSupplierInterface < Test::Unit::TestCase
 

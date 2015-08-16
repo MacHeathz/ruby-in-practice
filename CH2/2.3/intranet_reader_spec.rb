@@ -1,6 +1,6 @@
 require 'rubygems'
-require 'spec'
-require 'intranet_reader'
+require 'rspec'
+require_relative 'intranet_reader'
 
 
 describe "A new IntranetReader" do
@@ -9,15 +9,15 @@ describe "A new IntranetReader" do
   end
 
   it "should be empty." do
-    @my_rss.should be_empty
+    expect(@my_rss).to be_empty
   end
 
   it "should not have entries." do
-    @my_rss.entries.should be_nil
+    expect(@my_rss.entries).to be_nil
   end
 
   it "should not have 'raw'." do
-    @my_rss.raw.should be_nil
+    expect(@my_rss.raw).to be_nil
   end
 end
 
@@ -29,14 +29,14 @@ describe "A populated IntranetReader" do
   end
 
   it "should not be empty." do
-    @my_rss.should_not be_empty
+    expect(@my_rss).not_to be_empty
   end
 
   it "should have entries." do
-    @my_rss.entries.should_not be_nil
+    expect(@my_rss.entries).not_to be_nil
   end
 
   it "should have 'raw'." do
-    @my_rss.raw.should_not be_nil
+    expect(@my_rss.raw).not_to be_nil
   end
 end

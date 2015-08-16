@@ -4,9 +4,11 @@ require 'open-uri'
 
 
 class IntranetReader
+  attr_reader :raw
 
   def initialize(url)
     @feed_url = url
+    @rss = nil
   end
 
   def process
@@ -20,10 +22,6 @@ class IntranetReader
 
   def empty?
     @rss.nil? ? true : @rss.items.empty?
-  end
-
-  def raw
-    @raw
   end
 
 end

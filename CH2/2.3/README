@@ -5,6 +5,6 @@ This example requires RSpec and SimpleRss, if not already installed:
 
 To test the specification use the spec command:
 
-  spec intranet_reader_spec.rb
+  rspec intranet_reader_spec.rb
 
 A successful run should report 6 examples and 0 failures.
