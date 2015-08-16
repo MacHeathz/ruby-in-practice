@@ -8,15 +8,15 @@ describe "A new IntranetReader" do
     @my_rss = IntranetReader.new('sample_feed.rss')
   end
 
-  it "should be empty." do
+  it "is empty." do
     expect(@my_rss).to be_empty
   end
 
-  it "should not have entries." do
+  it "does not have entries." do
     expect(@my_rss.entries).to be_nil
   end
 
-  it "should not have 'raw'." do
+  it "does not have 'raw'." do
     expect(@my_rss.raw).to be_nil
   end
 end
@@ -28,15 +28,15 @@ describe "A populated IntranetReader" do
     @my_rss.process
   end
 
-  it "should not be empty." do
+  it "is not empty." do
     expect(@my_rss).not_to be_empty
   end
 
-  it "should have entries." do
+  it "has entries." do
     expect(@my_rss.entries).not_to be_nil
   end
 
-  it "should have 'raw'." do
+  it "has 'raw'." do
     expect(@my_rss.raw).not_to be_nil
   end
 end
